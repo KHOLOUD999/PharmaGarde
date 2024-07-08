@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>PHARMAGARDE</title>
+</head>
+<body>
+    <div id="navbar">
+        <div class="logo">
+            <div>
+                <img src="/static/images/logo.jpg" >
+            </div>
+            <div class="logo-text">
+                PHARMAGARDE
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="{{ url_for('map') }}" >Pharmacies de garde</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle"><span id="theme-icon">🌙</span> <span id="theme-text">Dark Mode</span></button></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

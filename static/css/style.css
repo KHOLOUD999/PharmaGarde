@@ -1,0 +1,1143 @@
+/* Add the updated CSS here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+header {
+    background-color: #2b983f;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+header li {
+    padding: 14px 20px;
+    position: relative;
+}
+header a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+header a:hover {
+    color: white;
+}
+header li.nav-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+header li.nav-item:hover::after {
+    transform: scaleX(1);
+}
+#content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 60px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px;
+}
+main {
+    background: white; /* Light mode background */
+    padding: 3em 0;
+    flex: 5 5 150px;
+    color: black; /* Light mode text color */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer {
+    background: #28a745;
+    padding: 1em 0;
+    color: black;
+}
+.footer-content {
+    max-width: 800px;
+    padding: 20px;
+}
+.footer-section {
+    margin-bottom: 20px;
+}
+.footer-section h2 {
+    margin-bottom: 10px;
+    text-align: left;
+}
+.footer-section p {
+    line-height: 1.6;
+    text-align: left;
+}
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+@media all and (max-width: 550px) {
+    .main {
+        flex-direction: column;
+    }
+    main {
+        padding: 5em 0;
+    }
+}
+#map-container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+#map {
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+}
+.info-window {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    max-width: 300px;
+}
+.info-window strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.info-window img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
+.info-window .phone {
+    margin-bottom: 8px;
+    color: #555;
+}
+.info-window button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+.info-window button:hover {
+    background-color: #357AE8;
+}
+.theme-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.theme-toggle #theme-icon {
+    margin-right: 8px;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+body.dark-mode header a {
+    color: white;
+}
+body.dark-mode header a:hover {
+    color: black;
+}
+body.dark-mode .logo-text {
+    color: white;
+}
+body.dark-mode #map {
+    filter: invert(90%);
+}
+#video-emsi {
+    width: 500px;
+    height: 250px;
+    text-align: left;
+}
+#EMSI-LOGO aside img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+body.dark-mode main {
+    background-color: #121212; /* Dark mode background */
+    color: white; /* Dark mode text color */
+}
+#video-emsi {
+    width: 500px;
+    height: 250px;
+    text-align: left;
+}
+#EMSI-LOGO {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    border: 2px solid #2b983f;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: white; /* Light mode background */
+    color: black; /* Light mode text color */
+}
+body.dark-mode #EMSI-LOGO {
+    background-color: #121212; /* Dark mode background */
+    color: white; /* Dark mode text color */
+}
+#EMSI-LOGO video {
+    width: 60%;
+    height: 430px;
+    filter: none; /* Remove filter in dark mode */
+}
+#EMSI-LOGO aside {
+    width: 35%;
+    padding-left: 20px;
+    background-color: white; /* Light mode background */
+    color: black; /* Light mode text color */
+    margin-top: 20px; /* Adjust margin as needed */
+}
+body.dark-mode #EMSI-LOGO aside {
+    background-color: #121212; /* Dark mode background */
+    color: white; /* Dark mode text color */
+}
+aside img {
+    width: 100%;
+    height: auto;
+}
+#ABOUT-US{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    border: 2px solid #2b983f;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: white; /* Light mode background */
+    color: black; /* Light mode text color */
+}
+#ABOUT-US aside{
+    width: 80%;
+    padding-left: 20px;
+    background-color: white; /* Light mode background */
+    color: black; /* Light mode text color */
+    margin-top: 20px;
+    margin-right: 30px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+#ABOUT-US aside p{
+    text-align: left;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    border: 2px solid #28a745;
+    border-radius:  10px; ;
+    width: 700px ;
+    margin-left: 50px;
+    padding: 5px;
+
+}
+#ABOUT-US aside h1{
+    text-align: right;
+    font-size: 2em;
+}
+#ABOUT-US img{
+    width: 100%;
+    height: 430px;
+    filter: none;
+    max-width: 600px;
+}
+
+#reviews-section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #2b983f;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reviews-section h2 {
+    font-size: 2em;
+    color: gray;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#stars label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    margin-right: 10px; /* Adds space between the label and stars */
+}
+.star {
+    font-size: 2em;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.star:hover,
+.star.selected {
+    color: #ffd700;
+}
+
+#user-name,
+#user-email,
+#review-text {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #2b983f;
+    border-radius: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    display: block;
+    margin: 10px;
+}
+
+#review-text {
+    height: 100px;
+    resize: none;
+}
+
+#submit-review {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2b983f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#submit-review:hover {
+    background-color: #237a2d;
+}
+
+#reviews-container {
+    margin-top: 20px;
+}
+
+.review {
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.review .stars {
+    color: #ffd700;
+}
+
+.review p {
+    margin: 10px 0 0;
+}
+
+@media all and (max-width: 550px) {
+    .main {
+        flex-direction: column;
+    }
+    main {
+        padding: 5em 0;
+    }
+}
+h3 {
+    font-size: 2em;
+    color: #2b983f;
+    text-transform: uppercase;
+}
+#medication-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the section content horizontally */
+    width: 100%;
+    margin-top: 20px;
+}
+
+#medication-section h1 {
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+
+.search-container {
+position: relative;
+width: 100%;
+max-width: 1000px; /* You can adjust this value as needed */
+}
+
+#search-bar {
+width: 100%;
+height: 50px; /* Increase the height */
+padding-right: 90px; /* Adjust to accommodate the button */
+box-sizing: border-box; /* Ensures padding is included in width/height */
+font-size: 18px; /* Make the text inside the input larger */
+border: 2px solid#2b983f;
+border-radius: 15px;
+padding-left: 10px;
+}
+
+#search-button {
+position: absolute;
+right: 0;
+top: 0;
+height: 50px; /* Same as input height */
+width: 90px; /* Adjust the width to your liking */
+border: none;
+background-color: #2b983f; /* Button background color */
+color: white; /* Button text color */
+font-size: 16px;
+cursor: pointer;
+border-radius: 15px;
+}
+
+#search-button:hover {
+    background-color: #237a2d;
+}
+
+#medication-table-container {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    width: 100%; /* Ensure the container takes full width */
+}
+
+#medication-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#medication-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #28a745;
+    z-index: 1;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#medication-table th, #medication-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#medication-table button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#medication-table button:hover {
+    background-color: #218838;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content img {
+    margin-right: 8px;
+    width: 20px;
+    height: auto;
+}
+button.added {
+background-color: #28a745; /* Green background */
+color: white; /* White text */
+transition: background-color 0.5s ease, color 0.5s ease;
+}
+#notification-container {
+position: fixed;
+top: 20px;
+right: 20px;
+width: 300px;
+z-index: 1000;
+}
+
+.notification {
+padding: 15px;
+margin-bottom: 10px;
+border-radius: 5px;
+color: white;
+font-weight: bold;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+opacity: 0;
+animation: fadein 0.5s forwards, fadeout 0.5s 2.5s forwards;
+}
+
+.notification.success {
+background-color: #28a745; /* Green background */
+}
+
+.notification.error {
+background-color: #dc3545; /* Red background */
+}
+
+@keyframes fadein {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes fadeout {
+from { opacity: 1; }
+to { opacity: 0; }
+}
+.cart-container {
+width: 100%;
+max-width: 1000px; /* Adjust as needed */
+margin-top: 20px;
+border: 1px solid #ddd;
+padding: 10px;
+border-radius: 10px;
+background-color: #28a745; /* Light blue background */
+}
+
+.cart-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+color: white; /* Blue color */
+}
+
+.cart-items {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.cart-item {
+display: flex;
+justify-content: space-between;
+padding: 5px 0;
+border-bottom: 1px solid black;
+color: #333; /* Dark gray text color */
+}
+
+.cart-item span {
+color: black;
+font-weight: bold; /* Blue color for item names */
+font-size: 20px;
+}
+
+.cart-total {
+text-align: right;
+font-size: 1.2em;
+font-weight: bold;
+margin-top: 10px;
+color: white; /* Blue color */
+}
+.button-panier {
+--background: white;
+--background-hover: gray;
+--text: #28a745;
+--shadow: rgba(0, 9, 61, .2);
+--paper: #28a745;
+--paper-lines: black;
+--trash: #28a745;
+--trash-lines: #BBC1E1;
+--check: #fff;
+--check-background: #5C86FF;
+position: relative;
+border: none;
+outline: none;
+background: none;
+padding: 10px 24px;
+border-radius: 7px;
+min-width: 142px;
+-webkit-appearance: none;
+-webkit-tap-highlight-color: transparent;
+cursor: pointer;
+display: flex;
+color: var(--text);
+background: var(--btn, var(--background));
+box-shadow: 0 var(--shadow-y, 4px) var(--shadow-blur, 8px) var(--shadow);
+transform: scale(var(--scale, 1));
+transition: transform .3s, box-shadow .3s, background .3s;
+span {
+display: block;
+font-size: 14px;
+line-height: 25px;
+font-weight: 600;
+opacity: var(--span-opacity, 1);
+transform: translateX(var(--span-x, 0)) translateZ(0);
+transition: transform .4s ease var(--span-delay, .2s), opacity .3s ease var(--span-delay, .2s);
+}
+.trash {
+display: block;
+position: relative;
+left: -8px;
+transform: translate(var(--trash-x, 0), var(--trash-y, 1px)) translateZ(0) scale(var(--trash-scale, .64));
+transition: transform .5s;
+&:before,
+&:after {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 2px;
+    border-radius: 1px;
+    background: var(--icon, var(--trash));
+    bottom: 100%;
+    transform-origin: 50% 6px;
+    transform: translate(var(--x, 3px), 2px) scaleY(var(--sy, .7)) rotate(var(--r, 0deg));
+    transition: transform .4s, background .3s;
+}
+&:before {
+    left: 1px;
+}
+&:after {
+    right: 1px;
+    --x: -3px;
+}
+.top {
+    position: absolute;
+    overflow: hidden;
+    left: -4px;
+    right: -4px;
+    bottom: 100%;
+    height: 40px;
+    z-index: 1;
+    transform: translateY(2px);
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        border-radius: 1px;
+        background: var(--icon, var(--trash));
+        width: var(--w, 12px);
+        height: var(--h, 2px);
+        left: var(--l, 8px);
+        bottom: var(--b, 5px);
+        transition: background .3s, transform .4s;
+    }
+    &:after {
+        --w: 28px;
+        --h: 2px;
+        --l: 0;
+        --b: 0;
+        transform: scaleX(var(--trash-line-scale, 1));
+    }
+    .paper {
+        width: 14px;
+        height: 18px;
+        background: var(--paper);
+        left: 7px;
+        bottom: 0;
+        border-radius: 1px;
+        position: absolute;
+        transform: translateY(-16px);
+        opacity: 0;
+        &:before,
+        &:after {
+            content: '';
+            width: var(--w, 10px);
+            height: 2px;
+            border-radius: 1px;
+            position: absolute;
+            left: 2px;
+            top: var(--t, 2px);
+            background: var(--paper-lines);
+            transform: scaleY(.7);
+            box-shadow: 0 9px 0 var(--paper-lines);
+        }
+        &:after {
+            --t: 5px;
+            --w: 7px;
+        }
+    }
+}
+.box {
+    width: 20px;
+    height: 25px;
+    border: 2px solid var(--icon, var(--trash));
+    border-radius: 1px 1px 4px 4px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: border-color .3s;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: var(--h, 20px);
+        top: 0;
+        left: var(--l, 50%);
+        background: var(--b, var(--trash-lines));
+    }
+    &:before {
+        border-radius: 2px;
+        margin-left: -2px;
+        transform: translateX(-3px) scale(.6);
+        box-shadow: 10px 0 0 var(--trash-lines);
+        opacity: var(--trash-lines-opacity, 1);
+        transition: transform .4s, opacity .4s;
+    }
+    &:after {
+        --h: 16px;
+        --b: var(--paper);
+        --l: 1px;
+        transform: translate(-.5px, -16px) scaleX(.5);
+        box-shadow: 7px 0 0 var(--paper), 14px 0 0 var(--paper), 21px 0 0 var(--paper);
+    }
+}
+.check {
+    padding: 4px 3px;
+    border-radius: 50%;
+    background: var(--check-background);
+    position: absolute;
+    left: 2px;
+    top: 24px;
+    opacity: var(--check-opacity, 0);
+    transform: translateY(var(--check-y, 0)) scale(var(--check-scale, .2));
+    transition: transform var(--check-duration, .2s) ease var(--check-delay, 0s), opacity var(--check-duration-opacity, .2s) ease var(--check-delay, 0s);
+    svg {
+        width: 8px;
+        height: 6px;
+        display: block;
+        fill: none;
+        stroke-width: 1.5;
+        stroke-dasharray: 9px;
+        stroke-dashoffset: var(--check-offset, 9px);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: var(--check);
+        transition: stroke-dashoffset .4s ease var(--checkmark-delay, .4s);
+    }
+}
+}
+&.delete {
+--span-opacity: 0;
+--span-x: 16px;
+--span-delay: 0s;
+--trash-x: 46px;
+--trash-y: 2px;
+--trash-scale: 1;
+--trash-lines-opacity: 0;
+--trash-line-scale: 0;
+--icon: #fff;
+--check-offset: 0;
+--check-opacity: 1;
+--check-scale: 1;
+--check-y: 16px;
+--check-delay: 1.7s;
+--checkmark-delay: 2.1s;
+--check-duration: .55s;
+--check-duration-opacity: .3s;
+.trash {
+    &:before,
+    &:after {
+        --sy: 1;
+        --x: 0;
+    }
+    &:before {
+        --r: 40deg;
+    }
+    &:after {
+        --r: -40deg;
+    }
+    .top {
+        .paper {
+            animation: paper 1.5s linear forwards .5s;
+        }
+    }
+    .box {
+        &:after {
+            animation: cut 1.5s linear forwards .5s;
+        }
+    }
+}
+}
+&.delete,
+&:hover {
+--btn: var(--background-hover);
+--shadow-y: 5px;
+--shadow-blur: 9px;
+}
+&:active {
+--shadow-y: 2px;
+--shadow-blur: 5px;
+--scale: .94;
+}
+}
+
+@keyframes paper {
+10%,
+100% {
+opacity: 1;
+}
+20% {
+transform: translateY(-16px);
+}
+40% {
+transform: translateY(0);
+}
+70%,
+100% {
+transform: translateY(24px);
+}
+}
+
+@keyframes cut {
+0%,
+40% {
+transform: translate(-.5px, -16px) scaleX(.5);
+}
+100% {
+transform: translate(-.5px, 24px) scaleX(.5);
+}
+}
+.button {
+    --color: #fff ;
+    --background: #28a745;
+    --height: 41px;
+    --width: 100px;
+    --icon: #fff;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    border: none;
+    outline: none;
+    background: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    width: var(--width);
+    letter-spacing: .5px;
+    color: var(--color);
+    line-height: var(--height);
+}
+
+.button:before,
+.button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.button:before {
+    transform: translate(-50%, -50%);
+    width: var(--before-w, var(--width));
+    height: var(--before-h, var(--height));
+    border-radius: var(--before-r, 7px);
+    background: var(--background);
+    transform-origin: 50% 50%;
+    transition: width .3s, height .3s, border-radius .2s;
+    transition-delay: .2s;
+}
+
+.button:after {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: var(--icon);
+    z-index: 2;
+    border-radius: 50%;
+    transform: scale(0);
+}
+
+.button span {
+    z-index: 1;
+    display: block;
+    position: relative;
+    opacity: var(--span-o, 1);
+    transform: scale(var(--span-s, 1));
+    transition: opacity .3s, transform .2s;
+    transition-delay: .2s;
+    width: 100%;
+}
+
+.button svg {
+    width: 15px;
+    height: 13px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    stroke: var(--icon);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    transform: translate(-50%, -50%);
+    stroke-dasharray: 17px;
+    stroke-dashoffset: var(--svg-o, 17px);
+    transition: stroke-dashoffset .3s ease;
+}
+
+.button.processing {
+    --before-w: 41px;
+    --before-h: 41px;
+    --before-r: 22px;
+    --span-o: 0;
+    --span-s: .6;
+    --after-s: 1;
+    --svg-o: 34px;
+}
+
+.button.processing:before {
+    animation: pulse 3s linear forwards;
+}
+
+.button.processing:after {
+    animation: dot 3s linear forwards;
+}
+
+.button.processing svg {
+    transition-delay: 3s;
+}
+
+@keyframes pulse {
+    4% {
+        transform: translate(-50%, -50%) scaleX(1.1);
+    }
+    8% {
+        transform: translate(-50%, -50%);
+    }
+    24%,
+    56%,
+    88% {
+        transform: translate(-50%, -50%) scale(.8);
+    }
+    40%,
+    72% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+@keyframes dot {
+    8% {
+        transform: scale(0);
+    }
+    16% {
+        transform: scale(1) rotate(30deg) translateX(48px);
+    }
+    95% {
+        transform: scale(1) rotate(1000deg) translateX(48px);
+    }
+    100% {
+        transform: scale(.125) rotate(1050deg) translate(52px, -6px);
+    }
+}
+body.dark-mode #ABOUT-US {
+    background-color: #1e1e1e; /* Dark mode background */
+    color: white; /* Dark mode text color */
+}
+
+body.dark-mode #ABOUT-US aside {
+    background-color: #1e1e1e; /* Dark mode background */
+    color: white; /* Dark mode text color */
+}
+
+body.dark-mode #ABOUT-US aside p {
+    background-color: #333; /* Darker background for text area */
+    color: white; /* Dark mode text color */
+    border-color: #333; /* Match border color to background */
+}
+
+body.dark-mode #reviews-section {
+    background-color: #1e1e1e; /* Dark mode background */
+    color: white; /* Dark mode text color */
+}
+
+body.dark-mode #reviews-section h2 {
+    color: lightgray; /* Slightly lighter text color for heading */
+}
+
+body.dark-mode #reviews-section .star {
+    color: #555; /* Darker color for stars */
+}
+
+body.dark-mode #reviews-section .star:hover,
+body.dark-mode #reviews-section .star.selected {
+    color: #ffd700; /* Gold color for selected stars */
+}
+
+body.dark-mode #reviews-section input,
+body.dark-mode #reviews-section textarea {
+    background-color: #333; /* Darker background for input areas */
+    color: white; /* Dark mode text color */
+    border: 2px solid #555; /* Border color to match dark mode */
+}
+
+body.dark-mode #reviews-section button {
+    background-color: #28a745; /* Button background color */
+    color: white; /* Button text color */
+}
+
+body.dark-mode #reviews-section button:hover {
+    background-color: #237a2d; /* Darker green for hover state */
+}
+
+body.dark-mode .review {
+    border-top: 1px solid #444; /* Darker border for reviews */
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 40px; /* Increased spacing between sections */
+}
+
+.footer-section h2 {
+    color: white;
+    margin-bottom: 10px;
+    align-self: center;
+    text-align: center;
+}
+
+.footer-section p {
+    color: gray;
+    font-size:larger;
+}
+
+.footer-section a {
+    color: #dddddd;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+}
+
+.footer-personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border: 2px solid #28a745;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    color: #28a745;
+}
+.team-member p{
+    color: gray;
+    font-weight: bold;
+}
+.footer-content p{
+    color: black;
+}
+.team-member .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer-contact-info p {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the Contact Us section */
+    text-align:left; 
+}
+.footer-contact-info h2{
+    align-self: center;
+    text-align: center;
+}
+.footer-personal-info h2{
+    align-self: center;
+    text-align: center;
+}
+
